@@ -1,11 +1,1626 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sex and the City — Special Screening</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f4ef;
+    color: #151515;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+section {
+    position: relative;
+}
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100svh;
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,.12), rgba(0,0,0,.72)),
+        url("IMG_7027.jpeg") center / cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 21px 35px;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.hero-badge {
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 100px;
+    padding: 7px 11px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: clamp(52px, 16vw, 88px);
+    line-height: .87;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+}
+
+.hero-description {
+    margin-top: 24px;
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,.88);
+}
+
+.screening {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.35);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.screening div {
+    flex: 1;
+}
+
+.screening small {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 8px;
+    opacity: .65;
+    margin-bottom: 5px;
+}
+
+.screening strong {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.scroll {
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .75;
+}
+
+
+/* ==============================
+   GENERAL
+================================ */
+
+.content-section {
+    padding: 78px 20px;
+}
+
+.section-number {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .45;
+    margin-bottom: 17px;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -1px;
+}
+
+.copy {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 23px;
+    max-width: 600px;
+}
+
+.italic {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+
+/* ==============================
+   SERIES
+================================ */
+
+.series {
+    background: #fff;
+}
+
+.series-feature {
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.series-feature img {
+    height: 480px;
+    object-fit: cover;
+}
+
+.photo-caption {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: .5;
+}
+
+
+/* ==============================
+   COLLAGE
+================================ */
+
+.collage {
+    background: #e7d8df;
+    padding: 25px 14px;
+}
+
+.collage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+}
+
+.collage-grid img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.collage-grid img:first-child {
+    grid-column: 1 / 3;
+    height: 310px;
+}
+
+
+/* ==============================
+   CARRIE
+================================ */
+
+.carrie {
+    background: #171717;
+    color: white;
+}
+
+.carrie .copy {
+    color: #bdbdbd;
+}
+
+.carrie-name {
+    font-family: "Playfair Display", serif;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: .95;
+    margin-top: 12px;
+}
+
+.carrie-name span {
+    display: block;
+    font-style: italic;
+}
+
+.carrie-photo {
+    margin-top: 38px;
+}
+
+.carrie-photo img {
+    height: 510px;
+    object-fit: cover;
+}
+
+
+/* ==============================
+   QUOTE
+================================ */
+
+.quote {
+    min-height: 75svh;
+    background: #d9b9ca;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.quote-symbol {
+    font-family: "Playfair Display", serif;
+    font-size: 95px;
+    line-height: .6;
+    opacity: .25;
+}
+
+.quote h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+}
+
+.quote p {
+    margin-top: 25px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ==============================
+   INTERRUPTION
+================================ */
+
+.interruption {
+    min-height: 100svh;
+    background: #050505;
+    color: white;
+    padding: 90px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.interruption-inner {
+    width: 100%;
+    max-width: 500px;
+}
+
+.system {
+    color: #e8a6c7;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.interruption h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.interruption p {
+    color: #999;
+    line-height: 1.75;
+    font-size: 14px;
+    max-width: 370px;
+    margin: 25px auto 0;
+}
+
+.loader {
+    height: 3px;
+    width: 100%;
+    background: #242424;
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+.loader-fill {
+    height: 100%;
+    background: #f0bad4;
+    width: 0;
+    transition: width 2.7s ease;
+}
+
+.analysis {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.result {
+    margin-top: 48px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: .8s ease;
+}
+
+.result.show-result {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result small {
+    color: #e8a6c7;
+    letter-spacing: 3px;
+    font-size: 9px;
+}
+
+.result h3 {
+    margin-top: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 31px;
+    font-weight: 500;
+}
+
+
+/* ==============================
+   MARINA REVEAL
+================================ */
+
+.marina-reveal {
+    background: #000;
+    color: white;
+}
+
+.reveal-image {
+    height: 86svh;
+    position: relative;
+}
+
+.reveal-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.reveal-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom,
+        transparent 42%,
+        rgba(0,0,0,.88) 100%);
+}
+
+.reveal-copy {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    right: 20px;
+    bottom: 38px;
+}
+
+.reveal-copy small {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 9px;
+}
+
+.reveal-copy h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 67px;
+    line-height: .9;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.reveal-copy h2 span {
+    display: block;
+    font-style: italic;
+    font-size: 39px;
+}
+
+.reveal-bottom {
+    padding: 48px 21px 70px;
+}
+
+.reveal-bottom p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   EVIDENCE
+================================ */
+
+.evidence {
+    background: #f6f0eb;
+}
+
+.evidence-card {
+    margin-top: 45px;
+}
+
+.evidence-card + .evidence-card {
+    margin-top: 55px;
+}
+
+.evidence-card img {
+    max-height: 570px;
+    object-fit: cover;
+}
+
+.exhibit {
+    margin-top: 15px;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: .45;
+}
+
+.evidence-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.evidence-card p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 7px;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   MARINA STORY
+================================ */
+
+.story {
+    background: #fff;
+}
+
+.story-row {
+    padding: 25px 0;
+    border-top: 1px solid #ddd;
+}
+
+.story-row:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.story-row small {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    opacity: .45;
+}
+
+.story-row h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.story-row p {
+    color: #666;
+    line-height: 1.65;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+
+/* ==============================
+   DANCING
+================================ */
+
+.dancing {
+    background: #e9b4cd;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.dancing h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.dancing p {
+    max-width: 380px;
+    margin: 24px auto 0;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.song {
+    margin-top: 28px;
+    display: inline-block;
+    border: 1px solid #111;
+    border-radius: 100px;
+    padding: 12px 22px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ==============================
+   FRIENDS
+================================ */
+
+.friends {
+    background: #181818;
+    color: white;
+}
+
+.friends .copy {
+    color: #aaa;
+}
+
+.friends-photo {
+    margin-top: 40px;
+}
+
+.friends-photo img {
+    min-height: 430px;
+    object-fit: cover;
+}
+
+.friend-names {
+    margin-top: 25px;
+}
+
+.friend {
+    border-bottom: 1px solid #333;
+    padding: 17px 0;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+}
+
+
+/* ==============================
+   PANAGIOTIS
+================================ */
+
+.panagiotis {
+    position: relative;
+    height: 85svh;
+    background: black;
+}
+
+.panagiotis img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panagiotis::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 45%,
+        rgba(0,0,0,.9)
+    );
+}
+
+.panagiotis-copy {
+    position: absolute;
+    z-index: 2;
+    bottom: 35px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+.panagiotis-copy small {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.panagiotis-copy h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   20
+================================ */
+
+.twenty {
+    background: #fff;
+    min-height: 90svh;
+    padding: 90px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twenty-number {
+    font-family: "Playfair Display", serif;
+    color: #df94b9;
+    font-size: 170px;
+    line-height: .8;
+}
+
+.twenty h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+.twenty p {
+    margin: 18px auto 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 360px;
+}
+
+
+/* ==============================
+   BIRTHDAY
+================================ */
+
+.birthday {
+    background: #0e0e0e;
+    color: white;
+}
+
+.birthday-image {
+    height: 68svh;
+}
+
+.birthday-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.birthday-content {
+    text-align: center;
+    padding: 65px 21px 85px;
+}
+
+.birthday-content small {
+    color: #e7a7c6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 9px;
+}
+
+.birthday-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 53px;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: 17px;
+}
+
+.birthday-content p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+    max-width: 390px;
+    margin: 24px auto 0;
+}
+
+
+/* ==============================
+   FINALE
+================================ */
+
+.finale {
+    min-height: 80svh;
+    background: #e6abc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.finale h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 61px;
+    line-height: .93;
+    font-weight: 500;
+}
+
+.finale h2 span {
+    font-style: italic;
+}
+
+.finale p {
+    margin-top: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 9px;
+}
+
+
+/* ==============================
+   SCROLL ANIMATION
+================================ */
+
+.fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .9s ease, transform .9s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
 </head>
+
+
 <body>
-    
+
+
+<!-- =========================================
+     1. FAKE CINEMA OPENING
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-top">
+        <span>Special Screening</span>
+        <span class="hero-badge">One Night Only</span>
+    </div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Back on the big screen
+        </div>
+
+        <h1>
+            Sex
+            <span>and the City</span>
+        </h1>
+
+        <p class="hero-description">
+            The friendships. The fashion. The city.
+            One of television's most iconic stories
+            returns for a special screening.
+        </p>
+
+        <div class="screening">
+
+            <div>
+                <small>Date</small>
+                <strong>September 19</strong>
+            </div>
+
+            <div>
+                <small>Screening</small>
+                <strong>20:00</strong>
+            </div>
+
+        </div>
+
+        <div class="scroll">
+            Discover the story ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     2. ABOUT THE SERIES
+========================================= -->
+
+<section class="content-section series">
+
+    <div class="section-number">
+        01 / The story
+    </div>
+
+    <h2 class="title fade">
+        Four women.<br>
+        One unforgettable city.
+    </h2>
+
+    <p class="copy fade">
+        Set against the unmistakable backdrop of New York,
+        <span class="italic">Sex and the City</span>
+        follows four friends through love, friendship,
+        careers, heartbreak, fashion and the beautifully
+        complicated business of growing up.
+    </p>
+
+    <p class="copy fade">
+        At the centre of it all is one woman whose
+        questions, choices and unmistakable style
+        became synonymous with the series.
+    </p>
+
+    <div class="series-feature fade">
+        <img src="IMG_7028.jpeg" alt="Sex and the City">
+
+        <div class="photo-caption">
+            <span>New York City</span>
+            <span>Sex and the City</span>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     3. SERIES PHOTOS
+========================================= -->
+
+<section class="collage">
+
+    <div class="collage-grid">
+
+        <img src="IMG_7029.jpeg" alt="Sex and the City">
+
+        <img src="IMG_7030.jpeg" alt="Sex and the City">
+
+        <img src="IMG_7031.jpeg" alt="Sex and the City">
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     4. CARRIE
+========================================= -->
+
+<section class="content-section carrie">
+
+    <div class="section-number">
+        02 / The leading lady
+    </div>
+
+    <div class="carrie-name fade">
+        Carrie
+        <span>Bradshaw.</span>
+    </div>
+
+    <p class="copy fade">
+        Writer, New Yorker and the unmistakable
+        centre of the story.
+    </p>
+
+    <p class="copy fade">
+        Carrie Bradshaw became known for her
+        blonde curls, fearless style and habit
+        of turning the smallest moment into a story
+        worth telling.
+    </p>
+
+    <div class="carrie-photo fade">
+        <img src="IMG_7032.jpeg" alt="Carrie Bradshaw">
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     5. MORE CARRIE
+========================================= -->
+
+<section class="content-section series">
+
+    <div class="section-number">
+        Carrie Bradshaw / continued
+    </div>
+
+    <h2 class="title fade">
+        The hair.<br>
+        The outfits.<br>
+        The attitude.
+    </h2>
+
+    <p class="copy fade">
+        For years, there seemed to be absolutely
+        no question about who the main character was.
+    </p>
+
+    <div class="series-feature fade">
+        <img src="IMG_7033.jpeg" alt="Carrie Bradshaw">
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     6. QUOTE
+========================================= -->
+
+<section class="quote">
+
+    <div class="fade">
+
+        <div class="quote-symbol">“</div>
+
+        <h2>
+            And just like that...
+            <br>
+            we noticed something.
+        </h2>
+
+        <p>
+            A closer look was required
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     7. ERROR / ANALYSIS
+========================================= -->
+
+<section class="interruption" id="analysis">
+
+    <div class="interruption-inner">
+
+        <div class="system">
+            Archive verification
+        </div>
+
+        <h2 class="fade">
+            Wait.
+            <br>
+            Something is wrong.
+        </h2>
+
+        <p class="fade">
+            During a routine review of the leading
+            character, our records detected
+            a rather serious inconsistency.
+        </p>
+
+        <div class="loader">
+            <div class="loader-fill" id="loaderFill"></div>
+        </div>
+
+        <div class="analysis">
+            <span>Comparing identities</span>
+            <span id="percentage">0%</span>
+        </div>
+
+        <div class="result" id="result">
+
+            <small>ERROR DETECTED</small>
+
+            <h3>
+                We may have been
+                following the wrong blonde.
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     8. MARINA REVEAL
+========================================= -->
+
+<section class="marina-reveal">
+
+    <div class="reveal-image">
+
+        <img src="IMG_1040.JPEG" alt="Marina">
+
+        <div class="reveal-copy">
+
+            <small>
+                Correct identity located
+            </small>
+
+            <h2>
+                Marina.
+                <span>The actual leading lady.</span>
+            </h2>
+
+        </div>
+
+    </div>
+
+    <div class="reveal-bottom">
+
+        <p>
+            Same blonde curls.
+            Same ability to make an entrance.
+            Same suspicious amount of main-character energy.
+        </p>
+
+        <p style="margin-top:18px;">
+            At this point, the evidence became
+            increasingly difficult to ignore.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     9. EVIDENCE
+========================================= -->
+
+<section class="content-section evidence">
+
+    <div class="section-number">
+        03 / The evidence
+    </div>
+
+    <h2 class="title fade">
+        We investigated.
+        <br>
+        It got worse.
+    </h2>
+
+    <p class="copy fade">
+        A review of the photographic evidence
+        revealed several concerning similarities.
+    </p>
+
+
+    <!-- PHOTO 1 -->
+
+    <div class="evidence-card fade">
+
+        <img src="IMG_1255.JPEG" alt="Marina">
+
+        <div class="exhibit">
+            Exhibit A
+        </div>
+
+        <h3>
+            The blonde curls.
+        </h3>
+
+        <p>
+            Suspiciously familiar.
+        </p>
+
+    </div>
+
+
+    <!-- PHOTO 2 -->
+
+    <div class="evidence-card fade">
+
+        <img src="IMG_1258.JPEG" alt="Marina">
+
+        <div class="exhibit">
+            Exhibit B
+        </div>
+
+        <h3>
+            The main-character pose.
+        </h3>
+
+        <p>
+            No further comment.
+        </p>
+
+    </div>
+
+
+    <!-- PHOTO 3 -->
+
+    <div class="evidence-card fade">
+
+        <img src="IMG_2586.JPEG" alt="Marina">
+
+        <div class="exhibit">
+            Exhibit C
+        </div>
+
+        <h3>
+            The lifestyle.
+        </h3>
+
+        <p>
+            The investigation was basically over
+            at this point.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     10. ACTUAL MARINA
+========================================= -->
+
+<section class="content-section story">
+
+    <div class="section-number">
+        04 / So who is Marina?
+    </div>
+
+    <h2 class="title fade">
+        The real story.
+    </h2>
+
+    <p class="copy fade" style="margin-bottom:40px;">
+        Once the identity issue had been resolved,
+        we discovered that Marina's story
+        was actually much more interesting.
+    </p>
+
+
+    <div class="story-row fade">
+
+        <small>CURRENT LOCATION</small>
+
+        <h3>England.</h3>
+
+        <p>
+            Where she currently studies
+            and continues her international
+            main-character era.
+        </p>
+
+    </div>
+
+
+    <div class="story-row fade">
+
+        <small>FIELD OF STUDY</small>
+
+        <h3>Psychology.</h3>
+
+        <p>
+            Studying the human mind.
+            A brave choice considering
+            the people she knows.
+        </p>
+
+    </div>
+
+
+    <div class="story-row fade">
+
+        <small>RELATIONSHIP STATUS</small>
+
+        <h3>Emilios.</h3>
+
+        <p>
+            Boyfriend.
+            An important recurring character
+            in the Marina universe.
+        </p>
+
+    </div>
+
+
+    <div class="story-row fade">
+
+        <small>KNOWN TALENT</small>
+
+        <h3>Dancing.</h3>
+
+        <p>
+            And this one requires
+            a section of its own.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     11. SORRY
+========================================= -->
+
+<section class="dancing">
+
+    <div class="section-number">
+        Important cultural history
+    </div>
+
+    <h2 class="fade">
+        The “Sorry”
+        <br>
+        choreography.
+    </h2>
+
+    <p class="fade">
+        Justin Bieber released the song.
+        Marina perfected the choreography.
+        We simply witnessed history.
+    </p>
+
+    <div class="song fade">
+        Sorry · Justin Bieber
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     12. FUN PHOTO
+========================================= -->
+
+<section class="content-section evidence">
+
+    <div class="section-number">
+        Further evidence
+    </div>
+
+    <h2 class="title fade">
+        Main characters
+        <br>
+        need nights out.
+    </h2>
+
+    <div class="evidence-card fade">
+
+        <img
+            src="882A4425-16A6-4DEE-8094-E73D336771D4.jpg"
+            alt="Marina"
+        >
+
+        <div class="exhibit">
+            Exhibit D
+        </div>
+
+        <h3>
+            Case closed.
+        </h3>
+
+        <p>
+            There was really nothing left
+            to investigate.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     13. FRIENDS
+========================================= -->
+
+<section class="content-section friends">
+
+    <div class="section-number">
+        05 / The cast
+    </div>
+
+    <h2 class="title fade">
+        But every leading lady
+        needs her people.
+    </h2>
+
+    <p class="copy fade">
+        Carrie had her girls.
+        Marina has hers.
+    </p>
+
+    <div class="friends-photo fade">
+
+        <img
+            src="att.L51XVsCCU2-qzn1UBoRGIKvR4JTkxnW6fI28n_cAon4.JPG"
+            alt="Marina and friends"
+        >
+
+    </div>
+
+    <div class="friend-names">
+
+        <div class="friend fade">
+            Andriana
+        </div>
+
+        <div class="friend fade">
+            Isidora
+        </div>
+
+        <div class="friend fade">
+            Eirini
+        </div>
+
+        <div class="friend fade">
+            Faidra
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     14. PANAGIOTIS
+========================================= -->
+
+<section class="panagiotis">
+
+    <img src="IMG_3817.jpeg" alt="Marina and Panagiotis">
+
+    <div class="panagiotis-copy">
+
+        <small>
+            Additional cast member
+        </small>
+
+        <h2>
+            And somehow,
+            Panagiotis made it
+            into the series too.
+        </h2>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     15. 20
+========================================= -->
+
+<section class="twenty">
+
+    <div>
+
+        <div class="section-number">
+            September 19
+        </div>
+
+        <div class="twenty-number fade">
+            20
+        </div>
+
+        <h2 class="fade">
+            Hold on.
+            <br>
+            Twenty?
+        </h2>
+
+        <p class="fade">
+            And suddenly the date of this
+            “special screening” starts
+            to make a little more sense.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     16. BIRTHDAY REVEAL
+========================================= -->
+
+<section class="birthday">
+
+    <div class="birthday-image">
+
+        <img
+            src="IMG_7279.JPG"
+            alt="Marina birthday"
+        >
+
+    </div>
+
+    <div class="birthday-content">
+
+        <small>
+            September 19 · Season 20
+        </small>
+
+        <h2 class="fade">
+            Happy Birthday,
+            <br>
+            Marina.
+        </h2>
+
+        <p class="fade">
+            Twenty years, countless stories
+            and a lot more still to come.
+        </p>
+
+        <p class="fade">
+            Keep dancing, keep travelling,
+            keep making memories
+            and — most importantly —
+            keep being Marina.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     17. END
+========================================= -->
+
+<section class="finale">
+
+    <div>
+
+        <h2 class="fade">
+            Marina
+            <br>
+            <span>and the City</span>
+        </h2>
+
+        <p class="fade">
+            Season 20 starts now
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* FADE ON SCROLL */
+
+const fadeObserver =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".fade").forEach(element => {
+    fadeObserver.observe(element);
+});
+
+
+/* FAKE IDENTITY ANALYSIS */
+
+let analysisStarted = false;
+
+const analysisSection =
+document.getElementById("analysis");
+
+const analysisObserver =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting && !analysisStarted) {
+
+            analysisStarted = true;
+
+            startAnalysis();
+
+        }
+
+    });
+
+}, {
+    threshold: .45
+});
+
+analysisObserver.observe(analysisSection);
+
+
+function startAnalysis() {
+
+    const fill =
+    document.getElementById("loaderFill");
+
+    const percentage =
+    document.getElementById("percentage");
+
+    const result =
+    document.getElementById("result");
+
+    fill.style.width = "99.8%";
+
+    let value = 0;
+
+    const timer = setInterval(() => {
+
+        value += Math.floor(Math.random() * 5) + 1;
+
+        if(value >= 99) {
+
+            value = 99.8;
+
+            clearInterval(timer);
+
+            setTimeout(() => {
+                result.classList.add("show-result");
+            }, 450);
+
+        }
+
+        percentage.textContent = value + "%";
+
+    }, 90);
+
+}
+
+</script>
+
 </body>
 </html>
